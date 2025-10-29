@@ -12,7 +12,7 @@ class Home(ListView) :
     template_name = 'blog/home.html'
     field = ['title']
     
-# details post
+# Details Post
 class Details_Post(View) :
     def get(self,request,pk) :
         cxt = {
@@ -27,14 +27,14 @@ class PostCreate(CreateView) :
     fields = ['title','content']
     success_url = reverse_lazy('home')
 
-# update post
+# Update Post
 class PostUpdate(UpdateView) :
     model = Post
     template_name = "blog/post_form.html"
     fields = ['title' , 'content']
     success_url = reverse_lazy('home')
 
-# delete post
+# Delete Post
 class PostDelete(DeleteView) :
     model = Post
     template_name = "blog/post_delete.html"
