@@ -1,0 +1,25 @@
+body {
+    background-color: #f7f7f7;
+}
+a {
+    text-decoration: none;
+}
+.navbar{
+    background-color: #2b3035;
+    padding: 30px;
+}
+.navbar a {
+    background-color: inherit;
+    color: white;
+    font-size: 20px;
+    font-display: none;
+}
+.navbar a :hover{
+    color : rgb(134, 130, 130) 
+}
+.content-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

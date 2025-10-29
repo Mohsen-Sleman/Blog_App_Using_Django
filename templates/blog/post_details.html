@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<div class='content-section'>
+    <h1>{{post.title}}</h1>
+    <p>{{post.content}}</p>
+    <hr/>
+    <small>{{post.pub_date}}</small>
+    <div class="btn-group">                    
+        <a href={% url "update" post.id%} class="btn btn-sm btn-outline-secondary">Update</a>
+        <a href={% url "delete" post.id%} class="btn btn-sm btn-outline-danger">Delete</a>
+        <a href={% url "home" %}>Home Page</a>
+    </div>
+</div>
+{% endblock %}

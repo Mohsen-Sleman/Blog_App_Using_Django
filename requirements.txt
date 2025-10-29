@@ -1,0 +1,10 @@
+# To run this project, you should have a virtual environment with Django 5.2.
+# and you should install this packages using this command => pip install -r requirements.txt
+
+asgiref==3.10.0
+crispy-bootstrap5==2025.6
+Django==5.2.7
+django-crispy-forms==2.4
+pip==25.3
+sqlparse==0.5.3
+tzdata==2025.2
