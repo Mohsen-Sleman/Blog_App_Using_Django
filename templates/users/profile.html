@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content%}
+<div class='content-section'>
+    <div class='media'>
+        <div>
+            <h2 class='account-heading'>{{user.username}}</h2>
+        </div>
+    </div>
+</div>
+    {% if user.is_authenticated %}
+        <p>Welcome, {{ user.username }}!</p>
+    {% endif %}
+{% endblock %}

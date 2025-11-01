@@ -12,16 +12,19 @@
     {% for post in post_list %}
     <div class="col-md-6 mb-4 ">
         <div class="content-section p-3 rounded-2 ">
-            <h2>
-                <a class="text-dark"href="{% url "details" post.id%}">{{post.title}}</a>
-            </h2>
+            <div >
+                <a class="text-dark fs-1 b"href="{% url "details" post.id%}">{{post.title}}</a>
+            </div>
             <p>{{post.content}}</p>
             <div class="d-flex justify-content-between align-items-center">
                 <small>{{post.pub_date}}</small>
-                <div class='btn-group'>
-                    <a href={% url "update" post.id%} class="btn btn-sm btn-outline-secondary">Update</a>
-                    <a href={% url "delete" post.id%} class="btn btn-sm btn-outline-danger">Delete</a>
-                </div>
+                {% if post.owner == user%}
+                    <div class='btn-group'>
+                        <a href={% url "update" post.id%} class="btn btn-sm btn-outline-secondary">Update</a>
+                        <a href={% url "delete" post.id%} class="btn btn-sm btn-outline-danger">Delete</a>
+                    </div>
+                {% endif %}
+                <small >Created by: {{post.owner}}</small>
             </div>
         </div>
     </div>
